@@ -1,0 +1,103 @@
+.assets {
+    margin-bottom: var(--offset-section);
+    &__title {
+        text-align: center;
+        margin-bottom: var(--size-small);
+    }
+    &__subtitle {
+        // text-align: center;
+        margin-bottom: var(--size-small);
+        // opacity: 0.7;
+    }
+    &__navigation {
+        margin-bottom: var(--size-big);
+    }
+
+    &__hash {
+        display: flex;
+        margin-left: -0.75rem;
+        margin-right: -0.75rem;
+        margin-bottom: var(--size-small);
+        &-item {
+            padding: 1.5rem 1.25rem;
+            border-radius: 1rem;
+            background: var(--hash-bg);
+            border: 1px solid var(--hash-border);
+            display: flex;
+            align-items: center;
+            margin: 0 0.75rem;
+            width: 20%;
+            text-align: left;
+            &.active {
+                background: var(--white);
+                border: 1px solid var(--black);
+                color: var(--black);
+            }
+        }
+        &-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.5rem;
+            background: var(--text);
+            flex-shrink: 0;
+            margin-right: 1rem;
+            color: var(--primary);
+            .active & {
+                background: var(--black);
+                color: var(--white);
+            }
+        }
+
+    }
+    @media screen and (max-width: 1199px) {
+        &__hash {
+            flex-wrap: wrap;
+            &-item {
+                width: auto;
+                min-width: 25%;
+                flex-grow: 1;
+                margin: 1rem 0.5rem 0;
+            }
+        }
+    }
+    @media screen and (max-width: 575px) {
+        &__hash {
+
+            &-item {
+                padding: 0.75rem;
+                font-size: 0.75rem;
+                margin: 0.5rem 0.25rem 0;
+            }   
+        }
+    }
+}
+
+
+.asset {
+    border-radius: 1rem;
+    padding: var(--size-big) var(--size-small) 0;
+    border: 1px solid var(--asset-border);
+    background: var(--asset-bg);
+    position: relative;
+    z-index: 1;
+    &:before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-image: url(../images/dist/grid.png);
+        background-position: top center;
+        background-repeat: no-repeat;
+        z-index: -1;
+    }
+    &__img {
+        text-align: center;
+    }
+}

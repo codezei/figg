@@ -1,0 +1,38 @@
+.brands {
+    margin-bottom: var(--offset-section);
+    &__title {
+        text-align: center;
+        margin-bottom: var(--size-medium);
+    }
+
+    &-swiper {
+        // padding: 0 25px;
+        .swiper-wrapper {
+            align-items: center;
+        }
+    }   
+    &-slide {
+        text-align: center;
+        img {
+            filter: var(--brands-img);
+        }
+    }
+    &-button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 25px;
+        height: 25px;
+        margin: 0;
+        z-index: 2;
+        &-next {
+            right: 0px;
+            left: auto;
+        }
+        &-prev {
+            left: 0px;
+            right: auto;
+        }
+    }
+
+}

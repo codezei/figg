@@ -1,0 +1,70 @@
+.app {
+    margin-bottom: var(--offset-section);
+    overflow: hidden;
+    position: relative;
+    background-image: var(--app-bg);
+    background-position: bottom center;
+    background-repeat: repeat;
+    &:after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        background: var(--app-gradient);
+        pointer-events: none;
+    }
+    &__container {
+        position: relative;
+        z-index: 2;
+        @media screen and (min-width: 1440px) {
+            &:before, &:after {
+                content: "";
+                width: calc(100vw - 75%);
+                height: 100%;
+                display: block;
+                position: absolute;
+                top: 0;
+                background: var(--app-gradient-2);
+                z-index: -1;
+                pointer-events: none;
+            }
+            &:before {
+                right: 75%;
+            }
+            &:after {
+                left: 75%;
+                transform: scale(-1, 1);
+                
+            }
+        }
+    }
+    &__row {
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__title {
+        margin-bottom: var(--size-medium);
+
+    }
+    &__navigation {
+        justify-content: flex-start;
+    }
+    @media screen and (max-width: 991px) {
+        
+        &__row {
+            flex-direction: column-reverse;
+        }
+        &__navigation {
+            margin-bottom: var(--size-small);
+        }
+    }
+    @media screen and (max-width: 575px) {
+        &__title {
+            text-align: center;
+        }
+    }
+}

@@ -1,0 +1,936 @@
+
+<!DOCTYPE html>
+<html data-theme="light">
+
+<head>
+
+	<meta charset="utf-8">
+	<!-- <base href="/"> -->
+
+	<title>Figg</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="icon" href="images/favicon.png">
+
+
+	<link rel="stylesheet" href="css/app.min.css">
+
+</head>
+
+<body>
+
+<header class="header">
+    <div class="container">
+        <div class="header__inner">
+            <div class="logo header__logo">
+                <a href="./index.html">
+                    <svg width="69" height="24" viewBox="0 0 69 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_2297_8333)">
+                            <path
+                                d="M2.21008 0.036665C1.60595 0.134655 1.14314 0.362134 0.743924 0.759345C0.3924 1.10756 0.16806 1.51177 0.0514737 1.99997C0.000246476 2.22045 -0.0121187 2.7069 0.0267433 2.95013C0.0656053 3.18461 0.175126 3.50658 0.284646 3.71306C0.593776 4.294 1.12371 4.73846 1.7508 4.94144C2.03167 5.03243 2.18535 5.05518 2.54571 5.05518C2.79655 5.05518 2.90783 5.04818 3.02265 5.02368C3.53316 4.91344 3.94474 4.70171 4.2998 4.36399C4.68135 4.00353 4.91983 3.57832 5.03994 3.04987C5.09647 2.7944 5.09824 2.2887 5.03994 2.03322C4.88626 1.34029 4.50471 0.794341 3.90765 0.412879C3.62501 0.230896 3.29115 0.106658 2.94316 0.0506639C2.79655 0.026166 2.3249 0.017417 2.21008 0.036665Z"
+                                fill="currentColor" />
+                            <path
+                                d="M9.2238 0.0366163C8.82988 0.0996103 8.47305 0.227348 8.19219 0.40583C6.9857 1.17051 6.64477 2.74885 7.43084 3.93524C7.80357 4.49868 8.39003 4.88539 9.07718 5.02363C9.32095 5.07263 9.82792 5.06738 10.0699 5.01488C10.5115 4.91689 10.7429 4.8049 11.2411 4.44794C11.6562 4.15047 12.1632 3.98948 12.6861 3.99123C13.2813 3.99123 13.7406 4.15222 14.2829 4.55118C14.6044 4.78915 14.9224 4.93264 15.3057 5.01488C15.5654 5.07088 16.0776 5.07088 16.3373 5.01488C16.8478 4.90464 17.2612 4.68241 17.6233 4.32195C17.9943 3.95098 18.2115 3.55027 18.3246 3.02707C18.3793 2.7716 18.3793 2.31489 18.3228 2.05417C18.2098 1.52747 17.9907 1.12676 17.6162 0.757546C17.2506 0.398831 16.8425 0.176603 16.3426 0.0681133C16.166 0.0296173 15.6661 0.0138688 15.4735 0.0401163C15.1609 0.0838618 14.8217 0.197601 14.5673 0.342836C14.5002 0.383083 14.3518 0.479323 14.2405 0.558065C13.8978 0.801292 13.617 0.930779 13.2513 1.01652C12.9757 1.07951 12.5589 1.09176 12.2709 1.04277C11.8947 0.978024 11.5308 0.832789 11.2305 0.624559C10.6794 0.241346 10.4179 0.124108 9.95688 0.0506148C9.81026 0.0261173 9.33862 0.0173683 9.2238 0.0366163Z"
+                                fill="currentColor" />
+                            <path
+                                d="M37.9187 0.139861C36.9807 0.302595 36.2564 0.981529 36.018 1.92119C35.965 2.12417 35.9526 2.59487 35.9915 2.8241C36.1575 3.79175 36.88 4.52843 37.8622 4.73316C38.1006 4.78391 38.4963 4.78566 38.7401 4.74016C39.5915 4.58093 40.2787 3.99124 40.5507 3.18631C40.6355 2.93609 40.6691 2.71911 40.6691 2.43914C40.6691 1.8162 40.4447 1.26675 40.0102 0.820544C39.6586 0.460079 39.1923 0.216853 38.7012 0.138111C38.4981 0.106614 38.1095 0.106614 37.9187 0.139861Z"
+                                fill="currentColor" />
+                            <path
+                                d="M30.8345 0.902809C30.589 0.929056 30.2657 1.00255 29.9937 1.09179C28.8596 1.461 27.9623 2.31842 27.609 3.36657C27.4571 3.82152 27.4341 4.0455 27.4341 5.09015V5.92132H26.3831H25.332V7.76739V9.61346H26.3654H27.3988V14.3555V19.0975H29.4655H31.5323V14.3292V9.56096L33.8605 9.56446L36.1869 9.56971L36.1922 14.3327L36.1957 19.0975H38.236H40.2762L40.2727 12.5129L40.2674 5.93007L35.8831 5.92482L31.497 5.92132V5.53986C31.497 5.1024 31.5164 4.98341 31.6135 4.78393C31.7019 4.60895 31.882 4.42872 32.0569 4.33947C32.2901 4.22399 32.2866 4.22399 33.4984 4.22399H34.5883V2.5529V0.881811L32.7829 0.883562C31.7884 0.885311 30.9123 0.89406 30.8345 0.902809Z"
+                                fill="currentColor" />
+                            <path
+                                d="M47.0432 5.68859C46.5203 5.70609 45.9497 5.81457 45.4074 5.99831C44.5189 6.29928 43.7522 6.77873 43.1022 7.43667C41.9452 8.6108 41.3817 10.1786 41.4329 12.0807C41.4894 14.2103 42.1059 15.8866 43.2435 17.017C44.2698 18.0336 45.607 18.5008 47.1933 18.3993C48.0836 18.3416 48.776 18.1789 49.4014 17.8814C49.8748 17.6557 50.3111 17.3284 50.5566 17.017L50.6308 16.9225L50.6255 18.0406L50.6202 19.1588L50.5778 19.2813C50.3235 20.0372 49.654 20.4904 48.6294 20.6006C48.4086 20.6251 47.907 20.6251 47.7144 20.6006C47.2657 20.5464 46.8806 20.4116 46.5644 20.1982C46.3136 20.0302 46.0115 19.6872 45.9056 19.451L45.872 19.3775H43.8158H41.7615V19.437C41.7615 19.5945 41.8657 20.0512 41.9752 20.3784C42.3285 21.43 43.0227 22.3365 43.9395 22.9437C44.7998 23.5141 45.8031 23.8483 47.0785 23.99C47.4176 24.0285 48.6082 24.0443 49.0181 24.0163C49.8094 23.9621 50.4842 23.8483 51.1007 23.6628C51.8497 23.4406 52.528 23.0959 53.0579 22.6724C53.2911 22.4869 53.6426 22.1265 53.8157 21.8973C54.162 21.437 54.4128 20.9156 54.5488 20.3749C54.6654 19.9129 54.6566 20.4939 54.6566 12.8716V5.93881H52.9908H51.325L51.0989 6.60375C50.9735 6.96946 50.8675 7.26868 50.8605 7.26868C50.8552 7.26868 50.8269 7.23544 50.7969 7.19694C50.6414 6.98871 50.1592 6.58625 49.8059 6.37102C49.0234 5.89682 48.0483 5.65534 47.0432 5.68859ZM48.3839 9.1515C48.7425 9.20399 49.1311 9.35973 49.4332 9.57321C49.6186 9.70444 49.9066 9.98617 50.0426 10.1681C50.3164 10.5374 50.4983 10.9538 50.5973 11.4333C50.6326 11.61 50.6379 11.6853 50.6379 12.0457C50.6379 12.4062 50.6326 12.4814 50.5973 12.6547C50.5107 13.0816 50.3076 13.5506 50.0691 13.8813C49.9225 14.0843 49.6416 14.3642 49.4508 14.5007C48.8202 14.9469 48.05 15.0747 47.3364 14.8507C47.1279 14.7859 46.9195 14.6862 46.7181 14.5532C46.4761 14.3957 46.1405 14.0615 45.9727 13.813C45.5452 13.1761 45.3615 12.3957 45.4622 11.631C45.5982 10.6126 46.1758 9.77094 47.0167 9.36673C47.4653 9.1515 47.9087 9.0815 48.3839 9.1515Z"
+                                fill="currentColor" />
+                            <path
+                                d="M61.2973 5.69559C59.8418 5.77084 58.3226 6.49177 57.3352 7.57491C56.6357 8.34309 56.1623 9.28274 55.945 10.3274C55.8302 10.8856 55.8125 11.0903 55.8125 11.8707C55.8125 12.6494 55.8284 12.8734 55.9291 13.4806C56.2612 15.4946 57.208 16.9942 58.6636 17.8114C59.1564 18.0879 59.7923 18.2891 60.4229 18.3714C61.0324 18.4501 61.8573 18.4134 62.5515 18.2751C63.592 18.0686 64.4487 17.6084 64.9486 16.989L65.0051 16.919L65.0069 17.9531C65.0069 18.6006 64.9998 19.024 64.9875 19.0905C64.9327 19.4055 64.7808 19.7012 64.5582 19.9357C64.1979 20.3119 63.6785 20.5289 62.9596 20.6041C62.6734 20.6339 62.0817 20.6146 61.8591 20.5691C61.6524 20.5271 61.3574 20.4309 61.2055 20.3557C60.8116 20.1614 60.4724 19.8395 60.2975 19.4982L60.2375 19.3775H58.1796C56.5456 19.3775 56.1216 19.3828 56.1216 19.3985C56.1216 19.4685 56.1817 19.7975 56.2276 19.9829C56.4431 20.8474 56.883 21.64 57.4959 22.2665C58.5081 23.3024 59.9018 23.8728 61.7549 24.0146C62.0605 24.0373 63.1044 24.0373 63.4259 24.0146C65.2913 23.8798 66.6956 23.3636 67.6849 22.4502C68.2378 21.9375 68.6688 21.2393 68.8843 20.5061C68.909 20.4222 68.9461 20.2769 68.9673 20.1842L69.0079 20.0162L69.0115 12.9766L69.0168 5.93882L67.3545 5.94232L65.6923 5.94757L65.4679 6.59851C65.3461 6.95547 65.2401 7.25294 65.2348 7.25819C65.2295 7.26344 65.1712 7.2057 65.1058 7.13045C64.726 6.69125 64.0371 6.23104 63.4118 6.00181C62.7582 5.76034 62.0393 5.6571 61.2973 5.69559ZM62.8607 9.16726C63.2016 9.23725 63.569 9.39998 63.8428 9.60471C63.9241 9.66421 64.0742 9.80069 64.1767 9.90568C64.696 10.4376 64.9804 11.1166 65.0175 11.9145C65.0493 12.5899 64.8373 13.3213 64.454 13.8603C64.3251 14.0405 64.0071 14.366 63.834 14.4902C62.6858 15.3267 61.1507 15.0187 60.324 13.7868C59.5344 12.6127 59.6634 10.9363 60.6173 9.93193C61.0324 9.49622 61.5058 9.24075 62.0693 9.14976C62.2654 9.11826 62.6646 9.12701 62.8607 9.16726Z"
+                                fill="currentColor" />
+                            <path
+                                d="M2.28866 7.63611C1.72339 7.69735 1.20406 7.93008 0.803071 8.30629C0.432115 8.65101 0.197176 9.04647 0.0682249 9.54342C0.0205306 9.7219 0.0134648 9.7814 0.00639896 10.0684C-0.00419977 10.4341 0.0169977 10.6038 0.108853 10.8978C0.465677 12.0422 1.60328 12.7876 2.79917 12.6599C3.29201 12.6056 3.70182 12.4429 4.11694 12.1349C4.33068 11.9739 4.50909 11.8707 4.72107 11.7832C5.52127 11.4525 6.43806 11.5627 7.14641 12.0737C7.42551 12.2749 7.50147 12.3239 7.66222 12.4026C8.77509 12.9538 10.1158 12.6389 10.8542 11.6555C11.4283 10.889 11.5166 9.87239 11.0838 9.01322C10.6882 8.2293 9.91975 7.7166 9.02416 7.63611C8.4006 7.58011 7.81767 7.7481 7.26123 8.14356C6.89911 8.40253 6.56525 8.55477 6.1784 8.63701C5.93992 8.68775 5.44532 8.693 5.20684 8.64576C4.86415 8.57751 4.4985 8.42528 4.23176 8.24155C3.68416 7.86183 3.41566 7.7376 2.97758 7.66235C2.78857 7.63086 2.46177 7.61861 2.28866 7.63611Z"
+                                fill="currentColor" />
+                            <path
+                                d="M2.19182 15.2549C1.45697 15.3617 0.828113 15.7536 0.414763 16.3696C0.236351 16.6338 0.126831 16.8963 0.0438072 17.2515C-0.00388714 17.451 -0.00388714 18.0424 0.0420407 18.2576C0.151561 18.7616 0.375901 19.1711 0.743324 19.5368C1.12664 19.9165 1.57356 20.151 2.10526 20.2455C2.33313 20.2857 2.74472 20.2857 2.97789 20.2455C3.58025 20.1387 4.14198 19.8132 4.51647 19.3548C4.91569 18.8631 5.11 18.2821 5.0835 17.654C5.05524 16.9943 4.80794 16.4361 4.33983 15.9741C3.86112 15.5017 3.28525 15.2567 2.60693 15.2392C2.45325 15.2339 2.29604 15.2409 2.19182 15.2549Z"
+                                fill="currentColor" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_2297_8333">
+                                <rect width="69" height="24" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </a>
+            </div>
+            <div class="header__navigation">
+                <nav class="header__navigation-main">
+                    <!-- wp_nav_menu() - primary-menu -->
+                    <div class="menu-primary-menu-container">
+                        <ul class="menu primary-menu" id="primary-menu">
+                            <li class="menu-item">
+                                <a href="#security">Security</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#assets">Features</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#blog">Blog</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#team">Team</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <nav class="header__navigation-secondary">
+                    <form class="switcher header__switcher">
+                        <input type="radio" checked="true" name="scheme" value="light" class="switcher__input"
+                            id="light">
+                        <input type="radio" name="scheme" value="dark" class="switcher__input" id="dark">
+                        <label class="switcher__slider" for="dark"></label>
+                    </form>
+                    <a href="" class="btn btn-white header__navigation-btn">Download</a>
+                </nav>
+            </div>
+            <button type="button" class="header__navigation-btn-menu" data-toggle=".header__navigation"
+                aria-label="Toggle Navigation">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </div>
+</header>
+<main>
+	<section class="intro">
+    <div class="container intro__container">
+        <h1 class="intro__title">
+            All your assets in 
+            <br>
+            one app
+        </h1>
+        <h3 class="intro__subtitle subtitle">
+            Discover the future of wealth management
+        </h3>
+        <div class="intro__navigation">
+            <div class="app-navigation">
+                <a href="" class="app-navigation__btn" target="_blank">
+                    <img src="./images/dist/apple-store.svg" alt="">
+                </a>
+                <a href="" class="app-navigation__btn" target="_blank">
+                    <img src="./images/dist/google-play.svg" alt="">
+                </a>
+            </div>
+
+        </div>
+        <div class="row align-items-end">
+            <div class="col-lg-3"></div>
+            <div class="col-lg-6">
+                <div class="intro__img">
+                        <img src="./images/dist/intro-img-light.png" alt="" class="multi-mode-img" data-theme-light="/images/dist/intro-img-light.png" data-theme-dark="/images/dist/intro-img-dark.png">
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="qr-code">
+                    <div class="qr-code__img">
+                        <img src="./images/dist/qr-code.svg" alt="">
+                    </div>
+                    <div class="qe-code__text">
+                        Scan to download
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+	<section class="brands">
+    <div class="container-fluid">
+        <h2 class="brands__title">In partnership with</h2>
+        <div class="swiper brands-swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide brands-slide">
+                    <img src="./images/dist/brand-img-1.png" alt="">
+                </div>
+                <div class="swiper-slide brands-slide">
+                    <img src="./images/dist/brand-img-2.png" alt="">
+                </div>
+                <div class="swiper-slide brands-slide">
+                    <img src="./images/dist/brand-img-3.png" alt="">
+                </div>
+                <div class="swiper-slide brands-slide">
+                    <img src="./images/dist/brand-img-4.png" alt="">
+                </div>
+                <div class="swiper-slide brands-slide">
+                    <img src="./images/dist/brand-img-5.png" alt="">
+                </div>
+                <div class="swiper-slide brands-slide">
+                    <img src="./images/dist/brand-img-6.png" alt="">
+                </div>
+            </div>
+            <!-- <div class="swiper-button-next brands-button-next brands-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-chevron-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                </svg>
+            </div>
+            <div class="swiper-button-prev brands-button-prev brands-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-chevron-left" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+                </svg>
+            </div> -->
+        </div>
+
+    </div>
+</section>
+	<section class="assets" id="assets">
+    <div class="container">
+        <h2 class="assets__title">
+            Financial & Physical assets
+        </h2>
+        <h3 class="assets__subtitle subtitle">
+            AI Powered identification for physical assets, advanced intelligence to provide wealth insights,
+            <br>
+            AI driven sentiment for portfolio and watchlist.
+        </h3>
+        <div class="assets__navigation">
+            <div class="app-navigation">
+                <a href="" class="app-navigation__btn" target="_blank">
+                    <img src="./images/dist/apple-store.svg" alt="">
+                </a>
+                <a href="" class="app-navigation__btn" target="_blank">
+                    <img src="./images/dist/google-play.svg" alt="">
+                </a>
+            </div>
+        </div>
+
+
+        <div class="assets__hash">
+            <button class="assets__hash-item active">
+                <div class="assets__hash-icon">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.00065 16.6666H12.0007C15.334 16.6666 16.6673 15.3333 16.6673 12V7.99998C16.6673 4.66665 15.334 3.33331 12.0007 3.33331H8.00065C4.66732 3.33331 3.33398 4.66665 3.33398 7.99998V12C3.33398 15.3333 4.66732 16.6666 8.00065 16.6666Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M8.75065 14.1666H11.2507C13.334 14.1666 14.1673 13.3333 14.1673 11.25V8.74998C14.1673 6.66665 13.334 5.83331 11.2507 5.83331H8.75065C6.66732 5.83331 5.83398 6.66665 5.83398 8.74998V11.25C5.83398 13.3333 6.66732 14.1666 8.75065 14.1666Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M6.67578 3.33335V1.66669" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M10 3.33335V1.66669" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M13.334 3.33335V1.66669" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M16.666 6.66669H18.3327" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M16.666 10H18.3327" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M16.666 13.3333H18.3327" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M13.334 16.6667V18.3334" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M10.0078 16.6667V18.3334" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M6.67578 16.6667V18.3334" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M1.66602 6.66669H3.33268" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M1.66602 10H3.33268" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M1.66602 13.3333H3.33268" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        
+                </div>
+                <div class="assets__hash-text">
+                    AI Asset Valuer
+                </div>
+            </button>
+            <button class="assets__hash-item">
+                <div class="assets__hash-icon">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.18398 16.25H6.25065C5.73398 16.25 5.27565 16.2333 4.86732 16.175C2.67565 15.9333 2.08398 14.9 2.08398 12.0833V7.91667C2.08398 5.1 2.67565 4.06667 4.86732 3.825C5.27565 3.76667 5.73398 3.75 6.25065 3.75H9.13398" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M12.5176 3.75H13.7509C14.2676 3.75 14.7259 3.76667 15.1342 3.825C17.3259 4.06667 17.9176 5.1 17.9176 7.91667V12.0833C17.9176 14.9 17.3259 15.9333 15.1342 16.175C14.7259 16.2333 14.2676 16.25 13.7509 16.25H12.5176" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M12.5 1.66669V18.3334" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M9.24607 9.99998H9.25356" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M5.91209 9.99998H5.91957" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        
+                </div>
+                <div class="assets__hash-text">
+                    Car identification
+                </div>
+                
+            </button>
+            <button class="assets__hash-item">
+                <div class="assets__hash-icon">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.51602 2.36664L3.02435 5.86664C2.27435 6.44997 1.66602 7.69164 1.66602 8.63331V14.8083C1.66602 16.7416 3.24102 18.325 5.17435 18.325H14.8243C16.7577 18.325 18.3327 16.7416 18.3327 14.8166V8.74997C18.3327 7.74164 17.6577 6.44997 16.8327 5.87497L11.6827 2.26664C10.516 1.44997 8.64102 1.49164 7.51602 2.36664Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M10 14.9916V12.4916" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        
+                </div>
+                <div class="assets__hash-text">
+                    Property
+                </div>
+            </button>
+            <button class="assets__hash-item">
+                <div class="assets__hash-icon">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18.3346 8.33335V12.5C18.3346 16.6667 16.668 18.3334 12.5013 18.3334H7.5013C3.33464 18.3334 1.66797 16.6667 1.66797 12.5V7.50002C1.66797 3.33335 3.33464 1.66669 7.5013 1.66669H11.668" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M18.3346 8.33335H15.0013C12.5013 8.33335 11.668 7.50002 11.668 5.00002V1.66669L18.3346 8.33335Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M5.83594 10.8334H10.8359" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M5.83594 14.1667H9.16927" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        
+                </div>
+                <div class="assets__hash-text">
+                    Insights
+                </div>
+                
+            </button>
+            <button class="assets__hash-item">
+                <div class="assets__hash-icon">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.66734 18.3333H13.334C16.684 18.3333 17.284 16.9917 17.459 15.3583L18.084 8.69167C18.309 6.65833 17.7257 5 14.1673 5H5.834C2.27567 5 1.69234 6.65833 1.91734 8.69167L2.54234 15.3583C2.71734 16.9917 3.31734 18.3333 6.66734 18.3333Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M6.66797 5.00002V4.33335C6.66797 2.85835 6.66797 1.66669 9.33464 1.66669H10.668C13.3346 1.66669 13.3346 2.85835 13.3346 4.33335V5.00002" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M11.6693 10.8333V11.6667C11.6693 11.675 11.6693 11.675 11.6693 11.6833C11.6693 12.5917 11.6609 13.3333 10.0026 13.3333C8.3526 13.3333 8.33594 12.6 8.33594 11.6917V10.8333C8.33594 10 8.33594 10 9.16927 10H10.8359C11.6693 10 11.6693 10 11.6693 10.8333Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M18.043 9.16669C16.118 10.5667 13.918 11.4 11.668 11.6834" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M2.18359 9.39166C4.05859 10.675 6.17526 11.45 8.33359 11.6917" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        
+                </div>
+                <div class="assets__hash-text">
+                    Portfolio sentiment +&nbsp;watchlist sentiment
+                </div>
+
+            </button>
+        </div>
+
+
+
+        <div class="swiper assets-swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide assets-slide">
+                    <div class="asset">
+                        <div class="asset__img">
+                            <img src="./images/dist/asset-img-1.png" alt="" class="multi-mode-img" data-theme-light="./images/dist/asset-img-1.png" data-theme-dark="./images/dist/asset-dark-img-1.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide assets-slide">
+                    <div class="asset">
+                        <div class="asset__img">
+                            <img src="./images/dist/asset-img-1.png" alt="" class="multi-mode-img" data-theme-light="./images/dist/asset-img-1.png" data-theme-dark="./images/dist/asset-img-1.png">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="swiper-slide assets-slide">
+                    <div class="asset">
+                        <div class="asset__img">
+                            <img src="./images/dist/asset-img-3.png" alt="" class="multi-mode-img" data-theme-light="./images/dist/asset-img-3.png" data-theme-dark="./images/dist/asset-img-3.png">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="swiper-slide assets-slide">
+                    <div class="asset">
+                        <div class="asset__img">
+                            <img src="./images/dist/asset-img-4.png" alt="" class="multi-mode-img" data-theme-light="./images/dist/asset-img-4.png" data-theme-dark="./images/dist/asset-img-4.png">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="swiper-slide assets-slide">
+                    <div class="asset">
+                        <div class="asset__img">
+                            <img src="./images/dist/asset-img-5.png" alt="" class="multi-mode-img" data-theme-light="./images/dist/asset-img-5.png" data-theme-dark="./images/dist/asset-img-5.png">
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- <div class="swiper-button-next assets-button-next assets-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-chevron-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                </svg>
+            </div>
+            <div class="swiper-button-prev assets-button-prev assets-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-chevron-left" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+                </svg>
+            </div> -->
+        </div>
+    </div>
+</section>
+	<section class="security stars-bg" id="security">
+    <div class="container">
+        <h2 class="security__title">Security</h2>
+        <h3 class="security__subtitle subtitle">
+            We like to focus on security and only use compliant vendors, 
+            <br>
+            and we do not store users' data
+        </h3>
+
+        <div class="security__lists">
+            <div class="security__list-preview">
+                <div class="security__preview">
+                    <div class="security__preview-title">
+                        AES <br>encryption
+                    </div>
+                </div>
+                <div class="security__preview">
+                    
+                    <div class="security__preview-title">
+                        Data at rest <br>encryption
+                    </div>
+                </div>
+                <div class="security__preview">
+                    
+                    <div class="security__preview-title">
+                        Private <br>cloud
+                    </div>
+                </div>
+            </div>
+            <div class="security__list-detail">
+                <div class="security__detail">
+                    <h4 class="security__detail-title">AES encryption for all connections</h4>
+                    <p class="security__detail-text">
+                        Lorem Ipsum has been industry's standard dummy text ever since the
+                        1500s.
+                    </p>
+                    <a href="" class="security__detail-link">
+                        Learn More
+                        <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M5.19922 12.1317L9.00255 8.32839C9.45172 7.87922 9.45172 7.14422 9.00255 6.69506L5.19922 2.89172"
+                                stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="security__detail">
+                    <h4 class="security__detail-title">Data at rest encryption</h4>
+                    <p class="security__detail-text">
+                        Lorem Ipsum has been industry's standard dummy text ever since the
+                        1500s.
+                    </p>
+                    <a href="" class="security__detail-link">
+                        Learn More
+                        <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M5.19922 12.1317L9.00255 8.32839C9.45172 7.87922 9.45172 7.14422 9.00255 6.69506L5.19922 2.89172"
+                                stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="security__detail">
+                    <h4 class="security__detail-title">Private cloud</h4>
+                    <p class="security__detail-text">
+                        Lorem Ipsum has been industry's standard dummy text ever since the
+                        1500s.
+                    </p>
+                    <a href="" class="security__detail-link">
+                        Learn More
+                        <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M5.19922 12.1317L9.00255 8.32839C9.45172 7.87922 9.45172 7.14422 9.00255 6.69506L5.19922 2.89172"
+                                stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="security__navigation">
+            <div class="app-navigation">
+                <a href="" class="app-navigation__btn" target="_blank">
+                    <img src="./images/dist/apple-store.svg" alt="">
+                </a>
+                <a href="" class="app-navigation__btn" target="_blank">
+                    <img src="./images/dist/google-play.svg" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+	<div class="results stars-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-lg-3 results__col">
+                <div class="result">
+                    <div class="result__icon">
+                        <svg width="248" height="120" viewBox="0 0 248 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="60" cy="60" r="59.25" stroke="currentColor" stroke-opacity="0.05" stroke-width="1.5"/>
+                            <circle cx="80" cy="60" r="59.25" stroke="currentColor" stroke-opacity="0.1" stroke-width="1.5"/>
+                            <circle cx="188" cy="60" r="59.25" stroke="currentColor" stroke-opacity="0.8" stroke-width="1.5"/>
+                            <path d="M188 60L188 20" stroke="currentColor" stroke-width="1.5"/>
+                            <path d="M228 60L188 60" stroke="currentColor" stroke-width="1.5"/>
+                            <circle cx="120" cy="60" r="59.25" stroke="currentColor" stroke-opacity="0.2" stroke-width="1.5"/>
+                            <path d="M120 60L120 20" stroke="currentColor" stroke-opacity="0.2" stroke-width="1.5"/>
+                            <path d="M160 60L120 60" stroke="currentColor" stroke-opacity="0.2" stroke-width="1.5"/>
+                            </svg>
+                            
+                    </div>
+
+                    <div class="result__info">
+                        <h3 class="result__value">
+                            17520+
+                            <span>hours</span>
+                        </h3>
+                        
+                        <div class="result__text">
+                            Hours spent creating the app
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-3 results__col">
+                <div class="result">
+                    <div class="result__icon">
+                        <svg width="248" height="139" viewBox="0 0 248 139" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M247 0V139" stroke="currentColor" stroke-width="1.5"/>
+                            <path d="M1 0V139" stroke="currentColor" stroke-opacity="0.05" stroke-width="1.5"/>
+                            <path d="M199.176 0V139" stroke="currentColor" stroke-opacity="0.5" stroke-width="1.5"/>
+                            <path d="M156.227 0V139" stroke="currentColor" stroke-opacity="0.4" stroke-width="1.5"/>
+                            <path d="M118.16 0V139" stroke="currentColor" stroke-opacity="0.3" stroke-width="1.5"/>
+                            <path d="M84.9688 0V139" stroke="currentColor" stroke-opacity="0.25" stroke-width="1.5"/>
+                            <path d="M56.6602 0V139" stroke="currentColor" stroke-opacity="0.2" stroke-width="1.5"/>
+                            <path d="M33.2266 0V139" stroke="currentColor" stroke-opacity="0.15" stroke-width="1.5"/>
+                            <path d="M14.6758 0V139" stroke="currentColor" stroke-opacity="0.1" stroke-width="1.5"/>
+                            </svg>
+                            
+                    </div>
+
+                    <div class="result__info">
+                        <h3 class="result__value">
+                            250
+                            <span>Years</span>
+                        </h3>
+                        
+                        <div class="result__text">
+                            Combined years of experience
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-3 results__col">
+                <div class="result">
+                    <div class="result__icon">
+                        <svg width="248" height="120" viewBox="0 0 248 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="60" cy="60" r="59.25" stroke="currentColor" stroke-opacity="0.05" stroke-width="1.5"/>
+                            <circle cx="80" cy="60" r="59.25" stroke="currentColor" stroke-opacity="0.1" stroke-width="1.5"/>
+                            <circle cx="120" cy="60" r="59.25" stroke="currentColor" stroke-opacity="0.2" stroke-width="1.5"/>
+                            <circle cx="188" cy="60" r="59.25" stroke="currentColor" stroke-opacity="0.8" stroke-width="1.5"/>
+                            </svg>
+                            
+                    </div>
+
+                    <div class="result__info">
+                        <h3 class="result__value">
+                            15
+                            <span>number</span>
+                        </h3>
+                        
+                        <div class="result__text">
+                            Number of partners cooperating with us
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-3 results__col">
+                <div class="result">
+                    <div class="result__icon">
+                        <svg width="246" height="140" viewBox="0 0 246 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0.75" y="139.25" width="18.5" height="36.5" rx="7.25" transform="rotate(-90 0.75 139.25)" stroke="currentColor" stroke-opacity="0.1" stroke-width="1.5"/>
+                            <rect x="42.75" y="139.25" width="38.5" height="36.5" rx="7.25" transform="rotate(-90 42.75 139.25)" stroke="currentColor" stroke-opacity="0.2" stroke-width="1.5"/>
+                            <rect x="84.75" y="139.25" width="78.5" height="36.5" rx="7.25" transform="rotate(-90 84.75 139.25)" stroke="currentColor" stroke-opacity="0.4" stroke-width="1.5"/>
+                            <rect x="126.75" y="139.25" width="98.5" height="36.5" rx="7.25" transform="rotate(-90 126.75 139.25)" stroke="currentColor" stroke-opacity="0.8" stroke-width="1.5"/>
+                            <rect x="168.75" y="139.25" width="118.5" height="36.5" rx="7.25" transform="rotate(-90 168.75 139.25)" stroke="currentColor" stroke-opacity="0.8" stroke-width="1.5"/>
+                            <rect x="210.75" y="139.25" width="138.5" height="34.5" rx="7.25" transform="rotate(-90 210.75 139.25)" stroke="currentColor" stroke-opacity="0.8" stroke-width="1.5"/>
+                            </svg>
+                            
+                    </div>
+
+                    <h3 class="result__value">
+                        $3M
+                    </h3>
+                    
+                    <div class="result__text">
+                        Pre-seed assets
+                        performance
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+	<section class="awards">
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="col-lg-7 col-xl-7">
+                <h2 class="awards__title">
+                    What sets Figg apart?
+                    Built by seasoned bankers, <span>Figg was built with functions and features that give you real control over your finances.</span>
+                </h2>
+            </div>
+            <div class="col-lg-5 col-xl-4 col-md-auto">
+                <h3 class="awards__subtitle subtitle">
+                    Awards
+                </h3>
+                <div class="row">
+                    <div class="col-6 awards__col">
+                        <div class="award">
+                            <div class="award__img">
+                                <img src="./images/dist/award-1.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 awards__col">
+                        <div class="award">
+                            <div class="award__img">
+                                <img src="./images/dist/award-2.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+	<section class="app stars-bg">
+    <div class="container app__container">
+        <div class="row app__row">
+            <div class="col-lg-6 col-xxl-6">
+                <div class="app__img text-center">
+                    <img src="./images/dist/app-img.png" alt="" class="multi-mode-img" data-theme-light="./images/dist/app-img.png" data-theme-dark="./images/dist/app-img-dark.png">
+                </div>
+            </div>
+            <div class="col-lg-6 col-xxl-5">
+                <h2 class="app__title">
+                    Download now, and see all your assets in one app.
+                </h2>
+
+                    <div class="app-navigation app__navigation">
+                        <a href="" class="app-navigation__btn" target="_blank">
+                            <img src="./images/dist/apple-store.svg" alt="">
+                        </a>
+                        <a href="" class="app-navigation__btn" target="_blank">
+                            <img src="./images/dist/google-play.svg" alt="">
+                        </a>
+                    </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+	<section class="team" id="team">
+    <div class="container">
+        <h2 class="team__title">
+            We are a team of passionate people <span>that love creating good user experiences and solving problems</span>
+        </h2>
+
+        <div class="swiper team-swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide team-slide">
+                    <div class="employee">
+                        <h5 class="employee__name">
+                            Sahba Hadipour
+                        </h5>
+                        <div class="employee__post">
+                            CEO & CO-founder
+                        </div>
+                        <div class="employee__img">
+                            <img src="./images/dist/employee-1.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide team-slide">
+                    <div class="employee">
+                        <h5 class="employee__name">
+                            Mark Bagnall
+                        </h5>
+                        <div class="employee__post">
+                            CEO & CO-founder
+                        </div>
+                        <div class="employee__img">
+                            <img src="./images/dist/employee-2.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide team-slide">
+                    <div class="employee">
+                        <h5 class="employee__name">
+                            Hanna Septimus
+                        </h5>
+                        <div class="employee__post">
+                            CEO & CO-founder
+                        </div>
+                        <div class="employee__img">
+                            <img src="./images/dist/employee-3.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide team-slide">
+                    <div class="employee">
+                        <h5 class="employee__name">
+                            Nolan George
+                        </h5>
+                        <div class="employee__post">
+                            CEO & CO-founder
+                        </div>
+                        <div class="employee__img">
+                            <img src="./images/dist/employee-4.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="team-navigation">
+
+                <div class="swiper-button-prev team-button-prev team-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-chevron-left" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+                    </svg>
+                </div>
+                <div class="swiper-button-next team-button-next team-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-chevron-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+	<section class="faq">
+    <div class="container">
+            <h2 class="faq__title">
+                Freequently asked questions
+            </h2>
+            <div class="faq__list">
+                <div class="faq__item">
+                    <div class="faq__item-header">
+                        <h4 class="faq__item-title">
+                            Digital First
+                        </h4>
+                        <button class="faq__item-btn">
+
+                        </button>
+                    </div>
+                    <div class="faq__item-content">
+                        We are a new breed of agency that think digital in all we do. It is simply how we have always seen the world.
+                    </div>
+                </div>
+                <div class="faq__item">
+                    <div class="faq__item-header">
+                        <h4 class="faq__item-title">
+                            Prototypes over powerpoints
+                        </h4>
+                        <button class="faq__item-btn">
+
+                        </button>
+                    </div>
+                    <div class="faq__item-content">
+                        We are a new breed of agency that think digital in all we do. It is simply how we have always seen the world.
+                    </div>
+                </div>
+                <div class="faq__item">
+                    <div class="faq__item-header">
+                        <h4 class="faq__item-title">
+                            Technology made human
+                        </h4>
+                        <button class="faq__item-btn">
+
+                        </button>
+                    </div>
+                    <div class="faq__item-content">
+                        We are a new breed of agency that think digital in all we do. It is simply how we have always seen the world.
+                    </div>
+                </div>
+                <div class="faq__item">
+                    <div class="faq__item-header">
+                        <h4 class="faq__item-title">
+                            Capacity of an agency. Speed of a start-up.
+                        </h4>
+                        <button class="faq__item-btn">
+
+                        </button>
+                    </div>
+                    <div class="faq__item-content">
+                        We are a new breed of agency that think digital in all we do. It is simply how we have always seen the world.
+                    </div>
+                </div>
+
+            </div>
+
+    </div>
+</section>
+	<section class="app" style="margin-bottom: 0;">
+    <div class="container app__container">
+        <div class="row justify-content-between align-items-center">
+
+            <div class="col-lg-6 col-xxl-5">
+                <h2 class="app__title">
+                    Download now, and see all your assets in one app.
+                </h2>
+
+                    <div class="app-navigation app__navigation">
+                        <a href="" class="app-navigation__btn" target="_blank">
+                            <img src="./images/dist/apple-store.svg" alt="">
+                        </a>
+                        <a href="" class="app-navigation__btn" target="_blank">
+                            <img src="./images/dist/google-play.svg" alt="">
+                        </a>
+                    </div>
+
+            </div>
+            <div class="col-lg-6 col-xxl-6">
+                <div class="app__img text-center">
+                    <img src="./images/dist/app-img.png" alt="" class="multi-mode-img" data-theme-light="./images/dist/app-img.png" data-theme-dark="./images/dist/app-img-dark.png">
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</section>
+</main>
+<footer class="footer">
+    <div class="container">
+        <div class="footer__top">
+            <div class="row justify-content-between">
+                <div class="col-xl-6 col-lg-3 col-sm-4 col-12">
+                    <div class="logo footer__logo">
+                        <a href="./index.html">
+                            <svg width="69" height="24" viewBox="0 0 69 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_2297_8333)">
+                                <path d="M2.21008 0.036665C1.60595 0.134655 1.14314 0.362134 0.743924 0.759345C0.3924 1.10756 0.16806 1.51177 0.0514737 1.99997C0.000246476 2.22045 -0.0121187 2.7069 0.0267433 2.95013C0.0656053 3.18461 0.175126 3.50658 0.284646 3.71306C0.593776 4.294 1.12371 4.73846 1.7508 4.94144C2.03167 5.03243 2.18535 5.05518 2.54571 5.05518C2.79655 5.05518 2.90783 5.04818 3.02265 5.02368C3.53316 4.91344 3.94474 4.70171 4.2998 4.36399C4.68135 4.00353 4.91983 3.57832 5.03994 3.04987C5.09647 2.7944 5.09824 2.2887 5.03994 2.03322C4.88626 1.34029 4.50471 0.794341 3.90765 0.412879C3.62501 0.230896 3.29115 0.106658 2.94316 0.0506639C2.79655 0.026166 2.3249 0.017417 2.21008 0.036665Z" fill="currentColor"/>
+                                <path d="M9.2238 0.0366163C8.82988 0.0996103 8.47305 0.227348 8.19219 0.40583C6.9857 1.17051 6.64477 2.74885 7.43084 3.93524C7.80357 4.49868 8.39003 4.88539 9.07718 5.02363C9.32095 5.07263 9.82792 5.06738 10.0699 5.01488C10.5115 4.91689 10.7429 4.8049 11.2411 4.44794C11.6562 4.15047 12.1632 3.98948 12.6861 3.99123C13.2813 3.99123 13.7406 4.15222 14.2829 4.55118C14.6044 4.78915 14.9224 4.93264 15.3057 5.01488C15.5654 5.07088 16.0776 5.07088 16.3373 5.01488C16.8478 4.90464 17.2612 4.68241 17.6233 4.32195C17.9943 3.95098 18.2115 3.55027 18.3246 3.02707C18.3793 2.7716 18.3793 2.31489 18.3228 2.05417C18.2098 1.52747 17.9907 1.12676 17.6162 0.757546C17.2506 0.398831 16.8425 0.176603 16.3426 0.0681133C16.166 0.0296173 15.6661 0.0138688 15.4735 0.0401163C15.1609 0.0838618 14.8217 0.197601 14.5673 0.342836C14.5002 0.383083 14.3518 0.479323 14.2405 0.558065C13.8978 0.801292 13.617 0.930779 13.2513 1.01652C12.9757 1.07951 12.5589 1.09176 12.2709 1.04277C11.8947 0.978024 11.5308 0.832789 11.2305 0.624559C10.6794 0.241346 10.4179 0.124108 9.95688 0.0506148C9.81026 0.0261173 9.33862 0.0173683 9.2238 0.0366163Z" fill="currentColor"/>
+                                <path d="M37.9187 0.139861C36.9807 0.302595 36.2564 0.981529 36.018 1.92119C35.965 2.12417 35.9526 2.59487 35.9915 2.8241C36.1575 3.79175 36.88 4.52843 37.8622 4.73316C38.1006 4.78391 38.4963 4.78566 38.7401 4.74016C39.5915 4.58093 40.2787 3.99124 40.5507 3.18631C40.6355 2.93609 40.6691 2.71911 40.6691 2.43914C40.6691 1.8162 40.4447 1.26675 40.0102 0.820544C39.6586 0.460079 39.1923 0.216853 38.7012 0.138111C38.4981 0.106614 38.1095 0.106614 37.9187 0.139861Z" fill="currentColor"/>
+                                <path d="M30.8345 0.902809C30.589 0.929056 30.2657 1.00255 29.9937 1.09179C28.8596 1.461 27.9623 2.31842 27.609 3.36657C27.4571 3.82152 27.4341 4.0455 27.4341 5.09015V5.92132H26.3831H25.332V7.76739V9.61346H26.3654H27.3988V14.3555V19.0975H29.4655H31.5323V14.3292V9.56096L33.8605 9.56446L36.1869 9.56971L36.1922 14.3327L36.1957 19.0975H38.236H40.2762L40.2727 12.5129L40.2674 5.93007L35.8831 5.92482L31.497 5.92132V5.53986C31.497 5.1024 31.5164 4.98341 31.6135 4.78393C31.7019 4.60895 31.882 4.42872 32.0569 4.33947C32.2901 4.22399 32.2866 4.22399 33.4984 4.22399H34.5883V2.5529V0.881811L32.7829 0.883562C31.7884 0.885311 30.9123 0.89406 30.8345 0.902809Z" fill="currentColor"/>
+                                <path d="M47.0432 5.68859C46.5203 5.70609 45.9497 5.81457 45.4074 5.99831C44.5189 6.29928 43.7522 6.77873 43.1022 7.43667C41.9452 8.6108 41.3817 10.1786 41.4329 12.0807C41.4894 14.2103 42.1059 15.8866 43.2435 17.017C44.2698 18.0336 45.607 18.5008 47.1933 18.3993C48.0836 18.3416 48.776 18.1789 49.4014 17.8814C49.8748 17.6557 50.3111 17.3284 50.5566 17.017L50.6308 16.9225L50.6255 18.0406L50.6202 19.1588L50.5778 19.2813C50.3235 20.0372 49.654 20.4904 48.6294 20.6006C48.4086 20.6251 47.907 20.6251 47.7144 20.6006C47.2657 20.5464 46.8806 20.4116 46.5644 20.1982C46.3136 20.0302 46.0115 19.6872 45.9056 19.451L45.872 19.3775H43.8158H41.7615V19.437C41.7615 19.5945 41.8657 20.0512 41.9752 20.3784C42.3285 21.43 43.0227 22.3365 43.9395 22.9437C44.7998 23.5141 45.8031 23.8483 47.0785 23.99C47.4176 24.0285 48.6082 24.0443 49.0181 24.0163C49.8094 23.9621 50.4842 23.8483 51.1007 23.6628C51.8497 23.4406 52.528 23.0959 53.0579 22.6724C53.2911 22.4869 53.6426 22.1265 53.8157 21.8973C54.162 21.437 54.4128 20.9156 54.5488 20.3749C54.6654 19.9129 54.6566 20.4939 54.6566 12.8716V5.93881H52.9908H51.325L51.0989 6.60375C50.9735 6.96946 50.8675 7.26868 50.8605 7.26868C50.8552 7.26868 50.8269 7.23544 50.7969 7.19694C50.6414 6.98871 50.1592 6.58625 49.8059 6.37102C49.0234 5.89682 48.0483 5.65534 47.0432 5.68859ZM48.3839 9.1515C48.7425 9.20399 49.1311 9.35973 49.4332 9.57321C49.6186 9.70444 49.9066 9.98617 50.0426 10.1681C50.3164 10.5374 50.4983 10.9538 50.5973 11.4333C50.6326 11.61 50.6379 11.6853 50.6379 12.0457C50.6379 12.4062 50.6326 12.4814 50.5973 12.6547C50.5107 13.0816 50.3076 13.5506 50.0691 13.8813C49.9225 14.0843 49.6416 14.3642 49.4508 14.5007C48.8202 14.9469 48.05 15.0747 47.3364 14.8507C47.1279 14.7859 46.9195 14.6862 46.7181 14.5532C46.4761 14.3957 46.1405 14.0615 45.9727 13.813C45.5452 13.1761 45.3615 12.3957 45.4622 11.631C45.5982 10.6126 46.1758 9.77094 47.0167 9.36673C47.4653 9.1515 47.9087 9.0815 48.3839 9.1515Z" fill="currentColor"/>
+                                <path d="M61.2973 5.69559C59.8418 5.77084 58.3226 6.49177 57.3352 7.57491C56.6357 8.34309 56.1623 9.28274 55.945 10.3274C55.8302 10.8856 55.8125 11.0903 55.8125 11.8707C55.8125 12.6494 55.8284 12.8734 55.9291 13.4806C56.2612 15.4946 57.208 16.9942 58.6636 17.8114C59.1564 18.0879 59.7923 18.2891 60.4229 18.3714C61.0324 18.4501 61.8573 18.4134 62.5515 18.2751C63.592 18.0686 64.4487 17.6084 64.9486 16.989L65.0051 16.919L65.0069 17.9531C65.0069 18.6006 64.9998 19.024 64.9875 19.0905C64.9327 19.4055 64.7808 19.7012 64.5582 19.9357C64.1979 20.3119 63.6785 20.5289 62.9596 20.6041C62.6734 20.6339 62.0817 20.6146 61.8591 20.5691C61.6524 20.5271 61.3574 20.4309 61.2055 20.3557C60.8116 20.1614 60.4724 19.8395 60.2975 19.4982L60.2375 19.3775H58.1796C56.5456 19.3775 56.1216 19.3828 56.1216 19.3985C56.1216 19.4685 56.1817 19.7975 56.2276 19.9829C56.4431 20.8474 56.883 21.64 57.4959 22.2665C58.5081 23.3024 59.9018 23.8728 61.7549 24.0146C62.0605 24.0373 63.1044 24.0373 63.4259 24.0146C65.2913 23.8798 66.6956 23.3636 67.6849 22.4502C68.2378 21.9375 68.6688 21.2393 68.8843 20.5061C68.909 20.4222 68.9461 20.2769 68.9673 20.1842L69.0079 20.0162L69.0115 12.9766L69.0168 5.93882L67.3545 5.94232L65.6923 5.94757L65.4679 6.59851C65.3461 6.95547 65.2401 7.25294 65.2348 7.25819C65.2295 7.26344 65.1712 7.2057 65.1058 7.13045C64.726 6.69125 64.0371 6.23104 63.4118 6.00181C62.7582 5.76034 62.0393 5.6571 61.2973 5.69559ZM62.8607 9.16726C63.2016 9.23725 63.569 9.39998 63.8428 9.60471C63.9241 9.66421 64.0742 9.80069 64.1767 9.90568C64.696 10.4376 64.9804 11.1166 65.0175 11.9145C65.0493 12.5899 64.8373 13.3213 64.454 13.8603C64.3251 14.0405 64.0071 14.366 63.834 14.4902C62.6858 15.3267 61.1507 15.0187 60.324 13.7868C59.5344 12.6127 59.6634 10.9363 60.6173 9.93193C61.0324 9.49622 61.5058 9.24075 62.0693 9.14976C62.2654 9.11826 62.6646 9.12701 62.8607 9.16726Z" fill="currentColor"/>
+                                <path d="M2.28866 7.63611C1.72339 7.69735 1.20406 7.93008 0.803071 8.30629C0.432115 8.65101 0.197176 9.04647 0.0682249 9.54342C0.0205306 9.7219 0.0134648 9.7814 0.00639896 10.0684C-0.00419977 10.4341 0.0169977 10.6038 0.108853 10.8978C0.465677 12.0422 1.60328 12.7876 2.79917 12.6599C3.29201 12.6056 3.70182 12.4429 4.11694 12.1349C4.33068 11.9739 4.50909 11.8707 4.72107 11.7832C5.52127 11.4525 6.43806 11.5627 7.14641 12.0737C7.42551 12.2749 7.50147 12.3239 7.66222 12.4026C8.77509 12.9538 10.1158 12.6389 10.8542 11.6555C11.4283 10.889 11.5166 9.87239 11.0838 9.01322C10.6882 8.2293 9.91975 7.7166 9.02416 7.63611C8.4006 7.58011 7.81767 7.7481 7.26123 8.14356C6.89911 8.40253 6.56525 8.55477 6.1784 8.63701C5.93992 8.68775 5.44532 8.693 5.20684 8.64576C4.86415 8.57751 4.4985 8.42528 4.23176 8.24155C3.68416 7.86183 3.41566 7.7376 2.97758 7.66235C2.78857 7.63086 2.46177 7.61861 2.28866 7.63611Z" fill="currentColor"/>
+                                <path d="M2.19182 15.2549C1.45697 15.3617 0.828113 15.7536 0.414763 16.3696C0.236351 16.6338 0.126831 16.8963 0.0438072 17.2515C-0.00388714 17.451 -0.00388714 18.0424 0.0420407 18.2576C0.151561 18.7616 0.375901 19.1711 0.743324 19.5368C1.12664 19.9165 1.57356 20.151 2.10526 20.2455C2.33313 20.2857 2.74472 20.2857 2.97789 20.2455C3.58025 20.1387 4.14198 19.8132 4.51647 19.3548C4.91569 18.8631 5.11 18.2821 5.0835 17.654C5.05524 16.9943 4.80794 16.4361 4.33983 15.9741C3.86112 15.5017 3.28525 15.2567 2.60693 15.2392C2.45325 15.2339 2.29604 15.2409 2.19182 15.2549Z" fill="currentColor"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_2297_8333">
+                                <rect width="69" height="24" fill="white"/>
+                                </clipPath>
+                                </defs>
+                                </svg>
+                        </a>
+                    </div>
+                    <div class="footer__navigation">
+                        <h6 class="footer__navigation-title">
+                            Addresses:
+                        </h6>
+                        <address class="footer__address">
+                            <p class="footer__address-item">
+                                – Parker Rd. Allentown, New Mexico 31134
+                            </p>
+                            <p class="footer__address-item">
+                                – Washington Ave. Manchester, Kentucky 39495
+                            </p>
+                            <p class="footer__address-item">
+                                – W. Gray St. Utica, Pennsylvania 57867
+                            </p>
+                        </address>
+                        <h6 class="footer__navigation-title">
+                            Email:
+                        </h6>
+                        <div class="menu-contact-menu-container">
+                            <ul class="menu contact-menu" id="contact-menu">
+                                <li class="menu-item">
+                                    <a href="mailto:email.company@example.com">email.company@example.com</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        
+                    </div>
+
+                </div>
+                <div class="col-xl-3 col-lg-3 col-sm-4 col-6 footer__navigation">
+                    <h6 class="footer__navigation-title">
+                        Company
+                    </h6>
+                    <div class="menu-company-menu-container">
+                        <ul class="menu company-menu" id="company-menu">
+                            <li class="menu-item">
+                                <a href="">Security</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="">Investment Assets</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="">Blog</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="">Team</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-sm-4 col-6">
+                    <h6 class="footer__navigation-title">
+                        Social
+                    </h6>
+                    <div class="menu-social-menu-container">
+                        <ul class="menu social-menu" id="social-menu">
+                            <li class="menu-item">
+                                <a href="" target="_blank">Facebook</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="" target="_blank">Instagram</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="" target="_blank">Twitter</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="" target="_blank">Linkedin</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="" target="_blank">Youtube</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__middle">
+            <div class="subscribe">
+                <div class="row justify-content-between align-items-center">
+                    <div class="col-sm-6">
+                        <h5 class="subscribe__title">Join our newsletter</h5>
+                        <h6 class="subscribe__subtitle">Keep up to date with everything action</h6>
+                    </div>
+                    <div class="col-auto">
+                        <form action="" class="subscribe__form">
+                            <input type="email" placeholder="Enter your email" required>
+                            <button class="btn">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="footer__bottom">
+            <div class="row justify-content-between align-items-center">
+
+                <div class="col-auto">
+                    <div class="menu-privacy-menu-container">
+                        <ul class="menu privacy-menu" id="privacy-menu">
+                            <li class="menu-item">
+                                <a href="" target="_blank">Privacy Policy</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="" target="_blank">Terms of Conditions</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-auto footer__copyright">
+                    Figg App, LLC. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+	<script src="js/app.min.js"></script>
+
+</body>
+</html>
