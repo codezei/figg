@@ -59,18 +59,29 @@
                     </div>
                 </nav>
                 <nav class="header__navigation-secondary">
-                    <form class="switcher header__switcher">
+                    <form class="switcher header__switcher header__switcher--desc">
                         <input type="radio" checked="true" name="scheme" value="light" class="switcher__input"
                             id="light">
                         <input type="radio" name="scheme" value="dark" class="switcher__input" id="dark">
-                        <label class="switcher__slider" for="dark"></label>
+                        <div class="switcher__slider"></div>
                     </form>
                     <a href="" class="btn btn-white header__navigation-btn">Download</a>
                 </nav>
             </div>
+            <form class="switcher header__switcher header__switcher--mob">
+                <input type="radio" checked="true" name="scheme" value="light" class="switcher__input"
+                    id="light">
+                <input type="radio" name="scheme" value="dark" class="switcher__input" id="dark">
+                <div class="switcher__slider"></div>
+            </form>
             <button type="button" class="header__navigation-btn-menu" data-toggle=".header__navigation"
                 aria-label="Toggle Navigation">
-                <span></span><span></span><span></span>
+                <span class="btn-inner">
+                    <span class="btn-line"></span>
+                    <span class="btn-line"></span>
+                    <span class="btn-line"></span>
+                </span>
+
             </button>
         </div>
     </div>

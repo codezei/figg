@@ -46,17 +46,25 @@ function stickyHeader () {
 
 
 function switcher () {
-	let switcherContainer = document.querySelector('.switcher')
-	let switcherSlider = document.querySelector('.switcher__slider')
-	switcherContainer.addEventListener('change', function (e) {
-		document.documentElement.setAttribute('data-theme', e.currentTarget[e.target.name].value )
-		if (e.currentTarget[e.target.name].value === 'dark') {
-			switcherSlider.setAttribute('for', 'light')
-		} else {
-			switcherSlider.setAttribute('for', 'dark')
-		}
-		switcherImages (e.currentTarget[e.target.name].value)
-	})
+	let switcherContainer = document.querySelectorAll('.switcher')
+	let switcherInputLight = document.querySelectorAll('.switcher__input[value="light"]')
+	let switcherInputDark = document.querySelectorAll('.switcher__input[value="dark"]')
+
+	let darkTheme = false
+
+	for(let j = 0; j < switcherContainer.length; j++) {
+		switcherContainer[j].addEventListener('click', function (e) {
+			darkTheme = !darkTheme
+			for(let i = 0; i < switcherInputLight.length; i++) {
+				switcherInputLight[i].checked = !darkTheme
+				switcherInputDark[i].checked = darkTheme
+			}
+			document.documentElement.setAttribute('data-theme', darkTheme ? 'dark' : 'light')
+			switcherImages(darkTheme ? 'dark' : 'light')
+		})
+	}
+
+
 
 
 	function switcherImages (themeMode) {
