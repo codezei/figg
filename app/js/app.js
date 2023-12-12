@@ -92,13 +92,11 @@ function brandsSlider() {
 	let swiper = new Swiper(".brands-swiper", {
 		slidesPerView: 3,
 		spaceBetween: 24,
-		autoplay: true,
-		loop: false,
-		speed: 400,
-		// navigation: {
-		// 	nextEl: ".brands-button-next",
-		// 	prevEl: ".brands-button-prev",
-		// },
+		loop: true,
+		autoplay: {
+			delay: 1500,
+
+		},
 
 		breakpoints: {
 			1200: {
