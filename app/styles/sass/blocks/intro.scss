@@ -4,7 +4,7 @@
     position: relative;
     background-image: var(--intro-bg);
     background-position: top center;
-    background-repeat: no-repeat;
+    // background-repeat: no-repeat;
     
     &:after {
         content: "";
@@ -56,6 +56,14 @@
     }
     &__navigation {
         margin-bottom: var(--size-small);
+    }
+    &__img {
+        text-align: center;
+        video {
+            max-width: 400px;
+            width: 100%;
+            border-radius: 60px;
+        }
     }
 
     @media screen and (max-width: 991px) {

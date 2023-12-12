@@ -17,9 +17,11 @@
 
     --asset-bg: linear-gradient(86deg, rgba(254, 250, 236, 0.50) 0%, #EDE8E1 53.53%);
     --asset-border: rgba(255, 255, 255, 0.04);
+    --assets-grid: url(../images/dist/grid.png);
     --security-bg: #F9E094;
     --security-border: #fff;
     --security-item: #000;
+    --header-border: rgba(255, 255, 255, 0.04);
 
     --result-bg: radial-gradient(63.94% 63.94% at 50% 0%, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.00) 100%), linear-gradient(305deg, #FEFAEC 0%, rgba(254, 250, 236, 0.00) 85.81%);
     --result-border: rgba(255, 255, 255, 0.04);
@@ -87,6 +89,7 @@ html[data-theme='dark'] {
     --asset-bg: linear-gradient(0deg, #0D0914 0%, #1D1529 100%);
     --security-bg: #958AD8;
     --security-border: #958AD8;
+    --assets-grid: url(../images/dist/grid-dark.png);
     --btn-bg: #958AD8;
     --btn-color: #000;
 
@@ -138,6 +141,7 @@ html[data-theme='dark'] {
 }
 h1, h2, h3, h4, h5, h6 {
     font-weight: 400;
+    margin-top: 0;
 }
 
 
@@ -319,9 +323,13 @@ body {
     padding: 0.5rem;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 260px;
     &__img {
         max-width: 80px;
         margin-right: 1rem;
+    }
+    @media screen and (max-width: 991px) {
+        margin-bottom: 0px;
     }
 }
 

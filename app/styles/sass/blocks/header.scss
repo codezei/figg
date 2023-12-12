@@ -13,6 +13,7 @@
     animation-fill-mode: forwards;
     animation-delay: 200ms;
     transform: translateY(-100%);
+    border-bottom: 1px solid var(--header-border);
     
 
     &.sticky,

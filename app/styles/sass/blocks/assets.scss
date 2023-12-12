@@ -93,7 +93,7 @@
         position: absolute;
         left: 0;
         top: 0;
-        background-image: url(../images/dist/grid.png);
+        background-image: var(--assets-grid);
         background-position: top center;
         background-repeat: no-repeat;
         z-index: -1;
